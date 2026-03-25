@@ -1,0 +1,14 @@
+def merge_sort(arr):
+  # Base case: 0 or 1 element — already sorted
+  if len(arr) <= 1:
+    return arr
+    # DIVIDE: find midpoint
+  mid = len(arr) // 2
+  left = arr[:mid]
+  right = arr[mid:]
+# CONQUER: sort each half recursively
+  left = merge_sort(left)
+  right = merge_sort(right)
+  # MERGE: merge sorted halves
+  return merge(left, right)
+print(merge_sort([38,25,44,21,24,45]))
