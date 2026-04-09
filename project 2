@@ -1,0 +1,14 @@
+import random
+n = random.randint(1,100)
+a = -1
+guess = 0
+while(a!=n):
+   guess+=1
+   a= int(input("Guess the number = "))
+   if(a>n):
+    print("lower number please: ")
+    guess+=1
+   elif(a<n):
+    print("Higher number please:")
+    guess+=1
+print(f"you have guess the number {n} currectly in {guess} attempts")
