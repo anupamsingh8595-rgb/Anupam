@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class MyClass {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the selling price: ");
+        int sp = sc.nextInt();
+         System.out.println("Enter the cost price: ");
+        int cp = sc.nextInt();
+        // int x = (int)n;
+        
+        // Removed the trailing semi-colons and added curly braces
+        if (sp > cp) {
+            double profitpercentage = ((sp-cp)/(double)cp)*100;
+            System.out.println("prift is"+(sp-cp));
+            System.out.println("priftpercentage is"+profitpercentage);
+
+        } if (cp>sp){      
+            double losspercentage = ((cp-sp)/(double)cp)*100;
+            System.out.println("loss is"+(cp-sp));
+            System.out.println("losspercentage is"+losspercentage);        
+            
+        }if (sp==cp){
+            System.out.println("no profitloss is");
+        }
+    }
+}
